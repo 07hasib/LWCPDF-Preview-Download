@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Generate PDF" class="slds-p-around_medium">
+        <div class="slds-p-around_medium"> 
+        <lightning-button 
+            label="Preview PDF" 
+            onclick={handleGeneratePdf} 
+            class="slds-m-top_medium slds-p-right_medium">
+        </lightning-button>
+            <lightning-button 
+            variant="brand"
+                label="Download PDF" 
+                onclick={handleDownloadPdf} 
+                class="slds-m-top_medium">
+            </lightning-button>
+        <template if:true={error}>
+            <p class="slds-text-color_error slds-m-top_medium">{error}</p>
+        </template>
+        </div>
+    </lightning-card>
+</template>
