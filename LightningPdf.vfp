@@ -1,0 +1,55 @@
+<apex:page contentType="application/pdf" renderAs="pdf" controller="LwcPdfGenerateControllers">
+    <h1>Invoice for {!account.Name}</h1>
+
+    <p><strong>Billing Address:</strong></p>
+    <table style="border-collapse: collapse; width: 100%; border: 1px solid #000;">
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000; width: 30%;"><strong>Street:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.BillingStreet}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000; width: 30%;"><strong>City:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.BillingCity}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000; width: 30%;"><strong>State:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.BillingState}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000; width: 30%;"><strong>Postal Code:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.BillingPostalCode}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000; width: 30%;"><strong>Country:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.BillingCountry}</td>
+        </tr>
+    </table>
+
+    <p><strong>Account Details:</strong></p>
+    <table style="border-collapse: collapse; width: 100%; border: 1px solid #000;">
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000; width: 30%;"><strong>Account ID:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.Id}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000;"><strong>Account Name:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.Name}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000;"><strong>Phone:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.Phone}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000;"><strong>Website:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.Website}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000;"><strong>Type:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.Type}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border: 1px solid #000;"><strong>Industry:</strong></td>
+            <td style="padding: 8px; border: 1px solid #000;">{!account.Industry}</td>
+        </tr>
+    </table>
+</apex:page>
